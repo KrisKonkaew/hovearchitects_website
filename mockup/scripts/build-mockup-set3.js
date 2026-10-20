@@ -1,8 +1,8 @@
 // "developer": static clickable mockup of the HOVE site, direction B ("Image as Doorway"),
 // built from docs/site-export (content + images). Output: repo/hovearchitects_mockup/
 const fs = require('fs'), path = require('path'), { execSync } = require('child_process');
-const ROOT = process.env.HOVE_ROOT || path.resolve(__dirname, '../../../..'); // project root that holds docs/site-export
-const OUT = path.resolve(__dirname, '..');
+const ROOT = '/Users/kriskonkaew/Works/Projects/hovearchitects';
+const OUT = path.join(ROOT, 'repo/hovearchitects_mockup');
 const EXP = path.join(ROOT, 'docs/site-export');
 const projects = require(EXP + '/data/projects.json').filter((p) => p.sourceVisibility === 'visible');
 const media = Object.fromEntries(require(EXP + '/data/media.json').map((m) => [m.id, m]));
